@@ -19,9 +19,24 @@ header {
   display: contents;
 }
 
-main {
+
+
+body {
   display: grid;
+}
+main {
+  display: contents;
   grid-template-columns: 1fr 1fr;
+}
+
+header {
+  display: contents;
+  grid-template-columns: 1fr;
+}
+
+header img {
+  grid column: 1 / -1;
+  grid-row: 1 / -1;
 }
 
 h2 {
@@ -35,26 +50,11 @@ figure {
 
 nav ul {
   list-style-type: none;
+  z-index: 1;
 }
 
 a {
   font-family: "Patua One";
   color: #fff;
   font-size: 2rem;
-}
-
-header {
-  display: grid;
-  grid-template-columns: 14rem 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-header img {
-  grid column: 1 / -1;
-  grid-row: 1 / -1;
-}
-
-h1 {
-  grid-column: 1;
-  grid-row: 2;
 }
