@@ -2,6 +2,8 @@ html {
   box-sizing: border-box;
   line-height: 1.5;
   background-color: #f2f1ed;
+  font-family: Georgia, serif;
+  line-height: 1.5;
 }
 
 *,
@@ -19,23 +21,36 @@ header {
   display: contents;
 }
 
-
-
 body {
+  margin: 0;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "banner banner"
+    "column1 column2";
+  padding: 1rem;
 }
+
 main {
   display: contents;
-  grid-template-columns: 1fr 1fr;
 }
 
-header {
-  display: contents;
-  grid-template-columns: 1fr;
+.pano {
+  grid-area: banner;
 }
 
-header img {
-  grid column: 1 / -1;
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+  width: 14rem;
+  margin: 0 0 1rem 1rem;
+  z-index: 1;
+  align-self: end;
+}
+
+header img{
+  grid-column: 1 / -1;
   grid-row: 1 / -1;
 }
 
@@ -48,13 +63,29 @@ figure {
   margin: 1rem;
 }
 
-nav ul {
+nav {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+ul {
   list-style-type: none;
-  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
 }
 
 a {
-  font-family: "Patua One";
+  font-family: "Patua One", sans-serif;
   color: #fff;
   font-size: 2rem;
+  padding: 1rem;
+}
+
+figure:nth-child(1) {
+  grid-area: column1;
+}
+
+figure:nth-child(2) {
+  grid-area: column2;
 }
