@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  line-height: 1.5;
   background-color: #f2f1ed;
   font-family: Georgia, serif;
   line-height: 1.5;
@@ -49,7 +48,7 @@ main {
   align-self: end;
 }
 
-header img{
+header img {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
 }
@@ -79,13 +78,18 @@ a {
   font-family: "Patua One", sans-serif;
   color: #fff;
   font-size: 2rem;
+}
+
+li {
   padding: 1rem;
 }
 
 figure:nth-child(1) {
   grid-area: column1;
+  margin: 0;
 }
 
 figure:nth-child(2) {
   grid-area: column2;
+  margin: 0;
 }
